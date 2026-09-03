@@ -68,7 +68,16 @@ ul.deliv li::before{content:"";position:absolute;left:0;top:17px;width:7px;heigh
 footer{background:var(--navy);color:#9FB0BF;padding:38px 24px;text-align:center;font-family:'Poppins',Arial,sans-serif;font-size:12px;line-height:2}
 footer a{color:var(--acc);text-decoration:none}
 .fade{opacity:0;transform:translateY(14px);transition:all .7s ease}.fade.in{opacity:1;transform:none}
-</style></head><body>
+</style><style id="upd-option-sep26">
+/* El menu desplegable nativo lo pinta el sistema operativo con fondo blanco:
+   hay que fijar el color del texto o las opciones quedan invisibles. */
+#rm-enroll select option,#rm-enroll option{color:#111 !important;background-color:#fff !important}
+#rm-enroll select option:checked,#rm-enroll option:checked{color:#111 !important;background-color:#e8e8e8 !important}
+@media (prefers-color-scheme:dark){
+  #rm-enroll select option,#rm-enroll option{color:#111 !important;background-color:#fff !important}
+}
+</style>
+</head><body>
 
 <div class="mast"><div class="mast-in">
  <div class="mast-brand"><img src="rm-logo.png" alt="RiskMathics" style="height:22px;width:auto;flex:none;display:block;">Treasury Leadership <span>Academy</span></div>
@@ -303,7 +312,7 @@ function rmGracias(res){
     '<div style="display:grid;gap:10px">'+
       '<a href="'+wa+'" target="_blank" rel="noopener" style="background:#25D366;color:#fff;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">WhatsApp '+waTxt+'</a>'+
       '<a href="mailto:'+mail+'?subject=Informes%20'+encodeURIComponent(RM_CFG.id)+'" style="border:1.5px solid currentColor;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">'+mail+'</a>'+
-      '<a href="tel:+525555363597" style="border:1.5px solid currentColor;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">+52 55 5536 3597 ext. 2203</a>'+
+      '<a href="tel:+525555363597" style="border:1.5px solid currentColor;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">+52 55 5536 3597 ext. 2223</a>'+
     '</div></div>';
   box.style.display="block";
   try{box.scrollIntoView({behavior:"smooth",block:"center"});}catch(_){box.scrollIntoView();}
